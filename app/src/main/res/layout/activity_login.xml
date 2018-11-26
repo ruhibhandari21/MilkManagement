@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="@string/login_into"
+        android:textColor="@color/colorRed"
+        android:textSize="25sp" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:background="#C5C5C5"
+        android:visibility="gone"></View>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorWhite">
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rel_username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edt_border">
+
+            <ImageView
+                android:id="@+id/img_person"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/person" />
+
+            <EditText
+
+                android:id="@+id/edt_username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/img_person"
+                android:background="@android:color/transparent"
+                android:hint="@string/username_email"
+                android:inputType="text"
+                android:paddingRight="10dp"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rel_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_username"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edt_border">
+
+            <ImageView
+                android:id="@+id/img_pass"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/password_red" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/img_pass"
+                android:background="@android:color/transparent"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingRight="10dp"
+                android:textColor="@color/colorTextColor"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/img_hide"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:padding="8dp"
+                android:src="@drawable/password_hide" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rel_pass"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_border"
+            android:gravity="center"
+            android:text="@string/login_small"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tv_forget_password"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_below="@+id/btn_submit"
+            android:text="@string/forget_password"
+            android:textColor="@color/colorBlack"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_terms_and_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_below="@+id/tv_already_user"
+            android:textColor="@color/colorDarkGray"
+            android:gravity="bottom"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="50dp"
+            android:text="@string/terms_and_condition"
+            />
+
+        <TextView
+            android:id="@+id/tv_already_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/colorDarkGray"
+            android:gravity="bottom"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:text="@string/new_user"
+            />
+
+        <TextView
+            android:layout_below="@+id/tv_already_user"
+            android:id="@+id/tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/colorRed"
+            android:gravity="bottom"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="50dp"
+            android:text="@string/signup"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
